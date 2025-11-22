@@ -14,7 +14,7 @@ def test_index_page(client):
 def test_add_item(client):
     response = client.post('/add', data={'item': 'Test item 1'}, follow_redirects=True)
     assert response.status_code == 200
-    assert b'Testtttttt item 1' in response.data
+    assert b'Test item 1' in response.data
 
 
 
